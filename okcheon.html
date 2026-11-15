@@ -15,7 +15,13 @@
 <meta property="og:url" content="https://cheolgeo-kr.github.io/okcheon.html">
 <meta property="og:site_name" content="원상복구철거센터">
 <meta property="og:locale" content="ko_KR">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://cheolgeo-kr.github.io/assets/og-image.png">
+<meta property="og:image:secure_url" content="https://cheolgeo-kr.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="원상복구철거센터 — 대전·세종·충청 상가 원상복구 · 중고집기 매입 · 폐기물 처리 한 번에, 소상공인 폐업지원금 정산 서류 완비, 상담 010-4366-7275">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -196,6 +202,23 @@ h2 em{font-style:normal;color:var(--amber-deep);text-decoration:underline;text-d
 .g-note b{color:var(--amber-2);font-weight:700}
 .g-warn{margin-top:9px;background:rgba(246,166,35,.08);border-left:2px solid var(--amber);border-radius:0 6px 6px 0;padding:9px 11px;font-size:11.5px;color:#c9d6e5;line-height:1.6}
 
+/* ---------- scene marquee ---------- */
+.scene{background:#fff;padding:34px 0 12px;overflow:hidden}
+.scene .sec-head{padding:0 20px}
+.mq{position:relative;overflow:hidden;padding:2px 0 4px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%)}
+.mq-track{display:flex;width:max-content;animation:mq-slide 46s linear infinite;will-change:transform}
+.mq-set{display:flex;flex:0 0 auto}
+.mq:hover .mq-track,.mq:active .mq-track,.mq:focus-within .mq-track{animation-play-state:paused}
+@keyframes mq-slide{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.sc-card{flex:0 0 auto;width:266px;margin-right:10px;border-radius:12px;overflow:hidden;background:var(--navy);border:1px solid #dfe6ef;box-shadow:0 4px 14px rgba(16,27,43,.08);position:relative}
+.sc-card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#dbe3ee}
+.sc-tag{position:absolute;left:8px;top:8px;background:rgba(11,22,38,.86);color:var(--amber-2);font-size:10.5px;font-weight:800;letter-spacing:.01em;padding:4px 8px;border-radius:6px}
+.sc-cap{padding:9px 11px 11px;background:var(--navy)}
+.sc-cap b{display:block;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:-.02em}
+.sc-cap small{display:block;color:#9fb2c9;font-size:11px;font-weight:500;margin-top:3px}
+.sc-note{padding:9px 20px 0;font-size:11px;color:#93a1b2;text-align:center;line-height:1.55}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+
 /* ---------- service cards ---------- */
 .svc{display:grid;gap:11px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 16px;box-shadow:0 2px 10px rgba(16,27,43,.045);position:relative}
@@ -361,6 +384,40 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
       600만 원은 전용면적 3.3㎡당 20만 원 · 부가세 제외 공급가액 기준 한도이며, 폐업 시점에 따라 달라집니다(2025년 7월 11일 이후 폐업 최대 600만 원 · 2023년 1월~2025년 7월 10일 폐업 최대 400만 원). 지급 여부와 금액은 소상공인시장진흥공단 심사 기준에 따르며, 자력 철거·현금 수기영수증은 지원 대상에서 제외됩니다.
     </div>
   </div>
+</section>
+
+<!-- ============ SCENE (전·후 사진 마퀴) ============ -->
+<section class="scene" id="scene">
+  <div class="sec-head">
+    <span class="eyebrow">현장 사진</span>
+    <h2>철거 전·후, <em>현장 그대로</em></h2>
+    <p class="sec-sub">실제 현장 사진이 오른쪽에서 왼쪽으로 계속 흐릅니다. 마우스를 올리거나 손으로 누르고 있으면 멈춥니다.</p>
+  </div>
+  <div class="mq" role="group" aria-label="현장 철거 전·후 사진">
+    <div class="mq-track">
+      <div class="mq-set">
+        <article class="sc-card"><img src="assets/scene-01.webp" alt="상가 매장과 주방 원상복구 작업 전 모습" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 전</span><div class="sc-cap"><b>매장·주방 모습</b><small>원상복구 전 상태</small></div></article>
+        <article class="sc-card"><img src="assets/scene-02.webp" alt="천장과 가벽, 바닥을 철거하는 내부 철거 작업 중 모습" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">내부 철거</span><div class="sc-cap"><b>천장·가벽 철거</b><small>바닥 마감까지 제거</small></div></article>
+        <article class="sc-card"><img src="assets/scene-03.webp" alt="학원 교실 칸막이를 철거하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">학원 철거</span><div class="sc-cap"><b>칸막이·교실 철거</b><small>철거재 분리 배출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-04.webp" alt="사무실 파티션과 사무가구를 철거하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">사무실 철거</span><div class="sc-cap"><b>파티션·사무가구</b><small>사무실 원상복구</small></div></article>
+        <article class="sc-card"><img src="assets/scene-05.webp" alt="주방 냉장고와 작업대 등 집기를 반출하는 작업" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">집기 반출</span><div class="sc-cap"><b>냉장고·작업대</b><small>사용 가능한 집기는 매입</small></div></article>
+        <article class="sc-card"><img src="assets/scene-06.webp" alt="상가 철거 폐기물을 분리해 트럭에 상차하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">폐기물 반출</span><div class="sc-cap"><b>분리 후 상차</b><small>현장에서 바로 반출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-07.webp" alt="집게차로 철거 폐기물을 덤프에 상차하는 모습" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">반출·상차</span><div class="sc-cap"><b>집게차 상차</b><small>철거 폐기물 일괄 반출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-08.webp" alt="철거와 원상복구를 마치고 깔끔하게 비워진 매장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 완료</span><div class="sc-cap"><b>원상복구 완료</b><small>깔끔하게 비운 매장</small></div></article>
+      </div>
+      <div class="mq-set" aria-hidden="true">
+        <article class="sc-card"><img src="assets/scene-01.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 전</span><div class="sc-cap"><b>매장·주방 모습</b><small>원상복구 전 상태</small></div></article>
+        <article class="sc-card"><img src="assets/scene-02.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">내부 철거</span><div class="sc-cap"><b>천장·가벽 철거</b><small>바닥 마감까지 제거</small></div></article>
+        <article class="sc-card"><img src="assets/scene-03.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">학원 철거</span><div class="sc-cap"><b>칸막이·교실 철거</b><small>철거재 분리 배출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-04.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">사무실 철거</span><div class="sc-cap"><b>파티션·사무가구</b><small>사무실 원상복구</small></div></article>
+        <article class="sc-card"><img src="assets/scene-05.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">집기 반출</span><div class="sc-cap"><b>냉장고·작업대</b><small>사용 가능한 집기는 매입</small></div></article>
+        <article class="sc-card"><img src="assets/scene-06.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">폐기물 반출</span><div class="sc-cap"><b>분리 후 상차</b><small>현장에서 바로 반출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-07.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">반출·상차</span><div class="sc-cap"><b>집게차 상차</b><small>철거 폐기물 일괄 반출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-08.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 완료</span><div class="sc-cap"><b>원상복구 완료</b><small>깔끔하게 비운 매장</small></div></article>
+      </div>
+    </div>
+  </div>
+  <p class="sc-note">실제 작업 현장 사진입니다. 매장 사진과 평수·위치를 보내주시면 철거 범위부터 정리해 드립니다.</p>
 </section>
 
 <!-- ============ SERVICE ============ -->
