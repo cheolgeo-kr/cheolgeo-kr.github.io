@@ -633,8 +633,20 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
         <input type="text" id="area" placeholder="예: 25평">
       </div>
       <div>
-        <label class="f-label" for="place">위치·층수<span>엘베 유무</span></label>
-        <input type="text" id="place" placeholder="예: 옥천읍 1층">
+        <label class="f-label" for="floor">층수<span>지하 포함</span></label>
+        <input type="text" id="floor" placeholder="예: 2층">
+      </div>
+    </div>
+    <div class="field">
+      <label class="f-label" for="place">위치<span>동까지</span></label>
+      <input type="text" id="place" placeholder="예: 옥천군 옥천읍">
+    </div>
+    <div class="field">
+      <label class="f-label">엘리베이터<span>선택</span></label>
+      <div class="chips" id="elevChips">
+        <span class="chip" data-v="있음">있음</span>
+        <span class="chip" data-v="없음">없음</span>
+        <span class="chip" data-v="1층">1층</span>
       </div>
     </div>
     <div class="field">
@@ -690,13 +702,26 @@ document.querySelectorAll('#kindChips .chip').forEach(function(c){
     c.classList.add('on'); kind = c.dataset.v;
   });
 });
+var elev = '';
+document.querySelectorAll('#elevChips .chip').forEach(function(c){
+  c.addEventListener('click', function(){
+    if (c.classList.contains('on')) {
+      c.classList.remove('on'); elev = ''; return;
+    }
+    document.querySelectorAll('#elevChips .chip').forEach(function(x){x.classList.remove('on')});
+    c.classList.add('on'); elev = c.dataset.v;
+  });
+});
 document.getElementById('sendBtn').addEventListener('click', function(){
   var area = document.getElementById('area').value.trim();
+  var floor = document.getElementById('floor').value.trim();
   var place = document.getElementById('place').value.trim();
   var memo = document.getElementById('memo').value.trim();
   var lines = ['[철거 견적 문의]', '· 종류: ' + kind];
   if (area) lines.push('· 평수: ' + area);
-  if (place) lines.push('· 위치·층수: ' + place);
+  if (floor) lines.push('· 층수: ' + floor);
+  if (place) lines.push('· 위치: ' + place);
+  if (elev) lines.push('· 엘리베이터: ' + elev);
   if (memo) lines.push('· 상황: ' + memo);
   lines.push('(사진 첨부 예정)');
   var body = encodeURIComponent(lines.join('\n'));
