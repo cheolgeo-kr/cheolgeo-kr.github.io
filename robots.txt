@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 검색로봇 수집 정책 (원상복구철거센터 · 대전·세종·충청 원상복구 철거)
+Sitemap: https://cheolgeo-kr.github.io/sitemap.xml
