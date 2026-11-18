@@ -112,6 +112,14 @@
             "@type": "Answer",
             "text": "사용 가능한 업소용 주방기구·냉장고·테이블·의자·카페 장비는 상태를 보고 매입합니다. 매입해 드리는 품목이 있으면 그만큼 전체 정리 비용 부담이 줄어듭니다. 철거·폐기물과 함께 한 번에 진행하시면 훨씬 수월합니다."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "신용카드 결제나 현금영수증도 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 철거·폐기물 처리 비용은 신용카드로 결제하실 수 있고, 요청하시면 현금영수증과 전자세금계산서를 발행합니다. 폐업지원금 정산에 쓰실 전자세금계산서·상세 공사내역서 2종도 함께 준비해 드립니다."
+          }
         }
       ]
     }
@@ -346,6 +354,14 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
 .tbl tbody td{padding:11px 8px;border-top:1px solid var(--line);color:#41506a;line-height:1.58;vertical-align:top;font-weight:500;letter-spacing:-.02em}
 .tbl tbody td b{color:var(--ink);font-weight:800}
 .tbl-note{margin-top:10px;font-size:11px;color:var(--slate);line-height:1.65;font-weight:500}
+
+/* ---------- 결제·증빙 안내 (2026-11-18) ---------- */
+.pay-box{background:#fff;border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:12px;padding:14px 15px;margin:0 0 14px;box-shadow:0 4px 14px rgba(16,27,43,.05)}
+.pay-box b{display:block;font-size:13.5px;font-weight:800;letter-spacing:-.02em}
+.pay-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.pay-chips span{font-size:11px;font-weight:800;color:var(--amber-deep);background:rgba(246,166,35,.12);border:1px solid rgba(246,166,35,.32);border-radius:999px;padding:5px 10px}
+.pay-box p{font-size:12px;color:var(--slate);line-height:1.65;margin-top:9px}
+.order-note{margin-top:14px;font-size:11.5px;color:var(--slate);line-height:1.7}
 </style>
 </head>
 <body>
@@ -406,7 +422,7 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
     <div class="g-tip">※ 철거 전 · 후 동일 각도 사진은 사장님께서 공사 전에 미리 촬영해 두시면 정산에 도움이 됩니다.</div>
 
     <div class="g-note">
-      <b>2026년 접수는 10월 21일 마감</b>되었습니다. 지금 철거하셔도 다음 공고 신청에 필요한 서류를 미리 갖춰 드리니, 나중에 서류가 없어 못 받는 일은 없게 하세요. 대전 사업장도 같은 서류로 준비합니다.
+      <b>2026년 접수는 10월 21일 마감</b>되었습니다. 2027년 공고 대비 정산 서류(전자세금계산서·상세 공사내역서 2종)를 지금 철거와 함께 갖춰 두시면, 다음 공고 때 서류가 없어 못 받는 일은 없습니다. 대전 사업장도 같은 서류로 준비합니다.
     </div>
     <div class="g-order">
       <b>철거 순서 주의 — 신청이 먼저입니다</b>
@@ -449,14 +465,14 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
         <article class="sc-card"><img src="assets/scene-08.webp" alt="철거와 원상복구를 마치고 깔끔하게 비워진 매장" width="640" height="400" decoding="async"><span class="sc-tag">작업 완료</span><div class="sc-cap"><b>원상복구 완료</b><small>깔끔하게 비운 매장</small></div></article>
       </div>
       <div class="mq-set" aria-hidden="true">
-        <article class="sc-card"><img src="assets/scene-01.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 전</span><div class="sc-cap"><b>매장·주방 모습</b><small>원상복구 전 상태</small></div></article>
-        <article class="sc-card"><img src="assets/scene-02.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">내부 철거</span><div class="sc-cap"><b>천장·가벽 철거</b><small>바닥 마감까지 제거</small></div></article>
-        <article class="sc-card"><img src="assets/scene-03.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">학원 철거</span><div class="sc-cap"><b>칸막이·교실 철거</b><small>철거재 분리 배출</small></div></article>
-        <article class="sc-card"><img src="assets/scene-04.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">사무실 철거</span><div class="sc-cap"><b>파티션·사무가구</b><small>사무실 원상복구</small></div></article>
-        <article class="sc-card"><img src="assets/scene-05.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">집기 반출</span><div class="sc-cap"><b>폐가전·폐가구 반출</b><small>빈집·주택 정리</small></div></article>
-        <article class="sc-card"><img src="assets/scene-06.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">폐기물 반출</span><div class="sc-cap"><b>분리 후 상차</b><small>현장에서 바로 반출</small></div></article>
-        <article class="sc-card"><img src="assets/scene-07.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">반출·상차</span><div class="sc-cap"><b>집게차 상차</b><small>철거 폐기물 일괄 반출</small></div></article>
-        <article class="sc-card"><img src="assets/scene-08.webp" alt="" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 완료</span><div class="sc-cap"><b>원상복구 완료</b><small>깔끔하게 비운 매장</small></div></article>
+        <article class="sc-card"><img src="assets/scene-01.webp" alt="상가 매장과 주방 원상복구 작업 전 모습" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 전</span><div class="sc-cap"><b>매장·주방 모습</b><small>원상복구 전 상태</small></div></article>
+        <article class="sc-card"><img src="assets/scene-02.webp" alt="천장과 가벽, 바닥을 철거하는 내부 철거 작업 중 모습" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">내부 철거</span><div class="sc-cap"><b>천장·가벽 철거</b><small>바닥 마감까지 제거</small></div></article>
+        <article class="sc-card"><img src="assets/scene-03.webp" alt="학원 교실 칸막이를 철거하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">학원 철거</span><div class="sc-cap"><b>칸막이·교실 철거</b><small>철거재 분리 배출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-04.webp" alt="사무실 파티션과 사무가구를 철거하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">사무실 철거</span><div class="sc-cap"><b>파티션·사무가구</b><small>사무실 원상복구</small></div></article>
+        <article class="sc-card"><img src="assets/scene-05.webp" alt="빈집에서 나온 냉장고·세탁기·장롱을 트럭에 실어 반출하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">집기 반출</span><div class="sc-cap"><b>폐가전·폐가구 반출</b><small>빈집·주택 정리</small></div></article>
+        <article class="sc-card"><img src="assets/scene-06.webp" alt="상가 철거 폐기물을 분리해 트럭에 상차하는 현장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">폐기물 반출</span><div class="sc-cap"><b>분리 후 상차</b><small>현장에서 바로 반출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-07.webp" alt="집게차로 철거 폐기물을 덤프에 상차하는 모습" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">반출·상차</span><div class="sc-cap"><b>집게차 상차</b><small>철거 폐기물 일괄 반출</small></div></article>
+        <article class="sc-card"><img src="assets/scene-08.webp" alt="철거와 원상복구를 마치고 깔끔하게 비워진 매장" width="640" height="400" loading="lazy" decoding="async"><span class="sc-tag">작업 완료</span><div class="sc-cap"><b>원상복구 완료</b><small>깔끔하게 비운 매장</small></div></article>
       </div>
     </div>
   </div>
@@ -640,6 +656,38 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
   <p class="tbl-note">업종과 매장 사진을 알려주시면 위 항목 중 어디까지 철거해야 하는지, 중고로 매입할 수 있는 집기는 무엇인지 함께 정리해 드립니다.</p>
 </section>
 
+<!-- ============ CLOSING ORDER ============ -->
+<section class="proc" id="order">
+  <div class="sec-head">
+    <span class="eyebrow">CLOSING</span>
+    <h2>폐업 매장 비우는<br><em>순서 5단계</em></h2>
+    <p class="sec-sub">지원금 확인부터 중고집기 매입·철거·폐기물 처리·서류까지 한 팀이 맡습니다. 사장님은 순서만 확인하시면 됩니다.</p>
+  </div>
+  <div class="steps">
+    <div class="step" data-n="1">
+      <h4>지원금 대상과 일정 확인</h4>
+      <p>폐업지원금(점포철거비)은 신청 → 자격 확인·선정 통보 → 철거 → 정산 순서입니다. 2026년 접수는 10월 21일 마감되어, 지금은 2027년 공고 일정을 보며 준비합니다.</p>
+    </div>
+    <div class="step" data-n="2">
+      <h4>임대차 원상복구 조항 확인</h4>
+      <p>계약서의 원상복구 범위와 건물 규정을 먼저 확인합니다. 어디까지 되돌릴지 착수 전에 정해 두면 철거 중 추가 요구가 생기지 않습니다.</p>
+    </div>
+    <div class="step" data-n="3">
+      <h4>매입할 집기 먼저 선별</h4>
+      <p>사용 가능한 주방기구·냉장고·테이블·카페 장비를 현장에서 골라 매입합니다. 매입해 드리는 만큼 정리 비용 부담이 줄어듭니다.</p>
+    </div>
+    <div class="step" data-n="4">
+      <h4>사진·평수·위치·층수로 견적 안내</h4>
+      <p>매장 사진과 평수·위치·층수(엘리베이터 유무)를 보내주시면 범위를 먼저 안내하고, 현장 확인 후 항목이 적힌 견적서를 드립니다.</p>
+    </div>
+    <div class="step" data-n="5">
+      <h4>철거·폐기물 반출·정산 서류</h4>
+      <p>집기 반출과 인테리어 철거, 폐기물 분류·반출을 진행하고 전자세금계산서·상세 공사내역서 2종을 발행해 드립니다.</p>
+    </div>
+  </div>
+  <p class="order-note">※ 신용카드 결제와 현금영수증 발행도 가능합니다. 결제 방법은 견적 안내 때 함께 정리해 드립니다.</p>
+</section>
+
 <!-- ============ PROCESS ============ -->
 <section class="proc" style="padding-top:8px">
   <div class="sec-head">
@@ -675,6 +723,7 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
     <p class="sec-sub">대전 외 지역도 직접 방문해 상담합니다.</p>
   </div>
   <div class="region-grid">
+    <a class="rg hot" href="chungnam.html"><b>충남</b><small>시·군 전체</small></a>
     <span class="rg hot cur"><b>대전</b><small>지금 보는 중</small></span>
     <a class="rg hot" href="cheongju.html"><b>청주</b><small>충북</small></a>
     <a class="rg hot" href="cheonan.html"><b>천안</b><small>충남</small></a>
@@ -733,6 +782,10 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
         <summary><span class="q">Q</span>철거를 먼저 하고 지원금을 신청해도 되나요?<span class="arw">▾</span></summary>
         <div class="a">순서를 지켜야 합니다. <b>신청 → 자격 확인·선정 통보 → 철거 → 정산</b> 순서이고, 선정 통보 전에 철거를 시작하면 지원 대상에서 제외됩니다. 이미 철거를 마치셨다면 사전 철거 인정 여부를 담당 기관에 먼저 확인하시고, 정산에 필요한 전자세금계산서와 상세 공사내역서는 저희가 발행해 드립니다.</div>
       </details>
+  <details>
+    <summary><span class="q">Q</span>신용카드 결제나 현금영수증도 되나요?<span class="arw">▼</span></summary>
+    <div class="a">네. 철거·폐기물 처리 비용은 신용카드로 결제하실 수 있고, 요청하시면 현금영수증과 전자세금계산서를 발행합니다. 폐업지원금 정산에 쓰실 전자세금계산서·상세 공사내역서 2종도 함께 준비해 드립니다.</div>
+  </details>
 </section>
 
 <!-- ============ QUOTE ============ -->
@@ -741,6 +794,11 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
     <span class="eyebrow">QUOTE</span>
     <h2>대전 상가,<br>사진·평수·위치·층수로 상담</h2>
     <p class="sec-sub">아래 내용을 적어 문자로 보내주시면 대략적인 견적 범위부터 안내드립니다. 사진은 문자에 함께 첨부하고, 매입을 원하는 집기도 적어 주세요.</p>
+  </div>
+  <div class="pay-box">
+    <b>신용카드 결제 · 증빙 발행</b>
+    <div class="pay-chips"><span>신용카드 결제</span><span>현금영수증</span><span>전자세금계산서</span></div>
+    <p>철거·폐기물 처리 비용은 신용카드로 결제하실 수 있고, 현금영수증과 전자세금계산서도 발행합니다. 폐업지원금 정산에 쓰실 서류가 필요하시면 상담 때 말씀해 주세요.</p>
   </div>
   <div class="form">
     <div class="field">

@@ -111,6 +111,14 @@
             "@type": "Answer",
             "text": "집기 반출과 폐기물 처리만 진행할 수도 있습니다. 물량과 반출 동선을 보고 작업 범위와 일정을 정합니다."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "신용카드 결제나 현금영수증도 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네. 철거·폐기물 처리 비용은 신용카드로 결제하실 수 있고, 요청하시면 현금영수증과 전자세금계산서를 발행합니다. 폐업지원금 정산에 쓰실 전자세금계산서·상세 공사내역서 2종도 함께 준비해 드립니다."
+          }
         }
       ]
     }
@@ -345,6 +353,14 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
 .tbl tbody td{padding:11px 8px;border-top:1px solid var(--line);color:#41506a;line-height:1.58;vertical-align:top;font-weight:500;letter-spacing:-.02em}
 .tbl tbody td b{color:var(--ink);font-weight:800}
 .tbl-note{margin-top:10px;font-size:11px;color:var(--slate);line-height:1.65;font-weight:500}
+
+/* ---------- 결제·증빙 안내 (2026-11-18) ---------- */
+.pay-box{background:#fff;border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:12px;padding:14px 15px;margin:0 0 14px;box-shadow:0 4px 14px rgba(16,27,43,.05)}
+.pay-box b{display:block;font-size:13.5px;font-weight:800;letter-spacing:-.02em}
+.pay-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.pay-chips span{font-size:11px;font-weight:800;color:var(--amber-deep);background:rgba(246,166,35,.12);border:1px solid rgba(246,166,35,.32);border-radius:999px;padding:5px 10px}
+.pay-box p{font-size:12px;color:var(--slate);line-height:1.65;margin-top:9px}
+.order-note{margin-top:14px;font-size:11.5px;color:var(--slate);line-height:1.7}
 </style>
 </head>
 <body>
@@ -587,6 +603,38 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
   </div>
 </section>
 
+<!-- ============ CLOSING ORDER ============ -->
+<section class="proc" id="order">
+  <div class="sec-head">
+    <span class="eyebrow">CLOSING</span>
+    <h2>폐업 매장 비우는<br><em>순서 5단계</em></h2>
+    <p class="sec-sub">지원금 확인부터 중고집기 매입·철거·폐기물 처리·서류까지 한 팀이 맡습니다. 사장님은 순서만 확인하시면 됩니다.</p>
+  </div>
+  <div class="steps">
+    <div class="step" data-n="1">
+      <h4>지원금 대상과 일정 확인</h4>
+      <p>폐업지원금(점포철거비)은 신청 → 자격 확인·선정 통보 → 철거 → 정산 순서입니다. 2026년 접수는 10월 21일 마감되어, 지금은 2027년 공고 일정을 보며 준비합니다.</p>
+    </div>
+    <div class="step" data-n="2">
+      <h4>임대차 원상복구 조항 확인</h4>
+      <p>계약서의 원상복구 범위와 건물 규정을 먼저 확인합니다. 어디까지 되돌릴지 착수 전에 정해 두면 철거 중 추가 요구가 생기지 않습니다.</p>
+    </div>
+    <div class="step" data-n="3">
+      <h4>매입할 집기 먼저 선별</h4>
+      <p>사용 가능한 주방기구·냉장고·테이블·카페 장비를 현장에서 골라 매입합니다. 매입해 드리는 만큼 정리 비용 부담이 줄어듭니다.</p>
+    </div>
+    <div class="step" data-n="4">
+      <h4>사진·평수·위치·층수로 견적 안내</h4>
+      <p>매장 사진과 평수·위치·층수(엘리베이터 유무)를 보내주시면 범위를 먼저 안내하고, 현장 확인 후 항목이 적힌 견적서를 드립니다.</p>
+    </div>
+    <div class="step" data-n="5">
+      <h4>철거·폐기물 반출·정산 서류</h4>
+      <p>집기 반출과 인테리어 철거, 폐기물 분류·반출을 진행하고 전자세금계산서·상세 공사내역서 2종을 발행해 드립니다.</p>
+    </div>
+  </div>
+  <p class="order-note">※ 신용카드 결제와 현금영수증 발행도 가능합니다. 결제 방법은 견적 안내 때 함께 정리해 드립니다.</p>
+</section>
+
 <!-- ============ PROCESS ============ -->
 <section class="proc" style="padding-top:8px">
   <div class="sec-head">
@@ -622,6 +670,7 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
     <p class="sec-sub">지역을 눌러 그 지역 철거 안내도 함께 보세요.</p>
   </div>
   <div class="region-grid">
+    <a class="rg hot" href="chungnam.html"><b>충남</b><small>시·군 전체</small></a>
     <a class="rg hot" href="daejeon.html"><b>대전</b><small>전 지역</small></a>
     <a class="rg hot" href="cheongju.html"><b>청주</b><small>충북</small></a>
     <a class="rg hot" href="cheonan.html"><b>천안</b><small>충남</small></a>
@@ -680,6 +729,10 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
     <summary><span class="q">Q</span>충청권 밖에 있는 매장도 되나요?<span class="arw">▼</span></summary>
     <div class="a">대전·세종·충청(금산·옥천 포함)은 직접 방문합니다. 그 밖의 지역은 위치와 수량을 알려주시면 가능한지 확인해 드립니다.</div>
   </details>
+  <details>
+    <summary><span class="q">Q</span>신용카드 결제나 현금영수증도 되나요?<span class="arw">▼</span></summary>
+    <div class="a">네. 철거·폐기물 처리 비용은 신용카드로 결제하실 수 있고, 요청하시면 현금영수증과 전자세금계산서를 발행합니다. 폐업지원금 정산에 쓰실 전자세금계산서·상세 공사내역서 2종도 함께 준비해 드립니다.</div>
+  </details>
 </section>
 
 <!-- ============ QUOTE ============ -->
@@ -688,6 +741,11 @@ footer{background:#0a1320;padding:24px 20px calc(30px + 74px);color:#7f94ac}
     <span class="eyebrow">QUOTE</span>
     <h2>매입할 집기,<br>사진·수량·위치로 상담</h2>
     <p class="sec-sub">아래 내용을 적어 문자로 보내주시면 매입 가능한 품목부터 안내드립니다. 사진은 문자에 함께 첨부해 주세요.</p>
+  </div>
+  <div class="pay-box">
+    <b>신용카드 결제 · 증빙 발행</b>
+    <div class="pay-chips"><span>신용카드 결제</span><span>현금영수증</span><span>전자세금계산서</span></div>
+    <p>철거·폐기물 처리 비용은 신용카드로 결제하실 수 있고, 현금영수증과 전자세금계산서도 발행합니다. 폐업지원금 정산에 쓰실 서류가 필요하시면 상담 때 말씀해 주세요.</p>
   </div>
   <div class="form">
     <div class="field">
